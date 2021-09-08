@@ -41,3 +41,21 @@ You can list hidden files with a *ls -a*
     # or combined with long description option
     $ ls -la
     ...
+
+
+## Find a file
+
+The **find** command search through a directory and its subdirectories for a file name and/or type
+
+
+    $ ls
+    file1 file2 subdir1
+    $ ls subdir1
+    file1
+    $ find . -type f   # search all files in current directory and subdirectories
+    file1
+    file2
+    subdir1/file1
+    $ find . -type f -name file1  # here we add condition on file name
+    ./file1
+    ./subdir1/file1
