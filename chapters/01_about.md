@@ -165,5 +165,6 @@ install stuff in your home and update the known *PATH* to find it.
 
 ## Credits:
 
+[linuxtutorial](https://ryanstutorials.net/linuxtutorial/commandline.php): lots of stuff here are from this **nice** site but I needed to update some things, add extra commands/description, for this lesson. Thanks for those materials! Ryan Chadwick copyright 2021 
+
 [what-is-the-linux-kernel](https://www.redhat.com/en/topics/linux/what-is-the-linux-kernel)
-[linuxtutorial](https://ryanstutorials.net/linuxtutorial/commandline.php) lot of stuff is taken from this site, thanks!!!!
