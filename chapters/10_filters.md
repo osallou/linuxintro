@@ -1,8 +1,8 @@
 # Filters
 
 A filter, in the context of the Linux command line,
-is a program that accepts textual data and then transforms it in a particular
-way.
+is a program that accepts textual data and then transforms it in a
+particular way.
 
 Filters are a way to take raw data, either produced by another program,
 or stored in a file, and manipulate it to be displayed in a way more suited to
@@ -45,7 +45,6 @@ head [-number of lines to print] [path]
     Susy oranges 5
     Mark watermellons 12
     Robert pears 4
-
 
 ## tail
 
@@ -90,7 +89,6 @@ Be sure to check out the man page to see everything it may do.
     Susy oranges 12
     Susy oranges 5
     Terry oranges 9
-
 
 ## nl
 
@@ -209,7 +207,6 @@ Let's see an example. Say we ran out of oranges and wanted to instead give those
     Betty limes 14
 
 Sed, by default, does not modify input file. Using "-i" option, input file is modified.
-
 
 ## uniq
 

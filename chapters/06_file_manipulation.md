@@ -41,11 +41,11 @@ if it exists, updates its last modification time.
 When we use cp the destination can be a path to either a file or directory.
 If it is to a file then it will create a copy of the source but name the copy
  the filename specified in destination.
- If we provide a directory as the destination then it will copy the file into that directory and the copy will have the same name as the source.
+If we provide a directory as the destination then it will copy the file into that directory and the copy will have the same name as the source.
 
 In it's default behaviour cp will only copy a file (there is a way to copy several files in one go but we'll get to that in chapter [Wildcards](08_wildcards.md)).
 
-Using the -r option, which stands for recursive, we may copy directories. 
+Using the -r option, which stands for recursive, we may copy directories.
 
 Recursive means that we want to look at a directory and all files and
 directories within it, and for subdirectories, go into them and do the same
@@ -67,8 +67,10 @@ thing and keep doing this.
 
 ## Moving files or directories
 
-To move a file we use the command mv which is short for move. It operates in a similar way to cp. One slight advantage is that we can move directories without having to provide the -r option.
-
+To move a file we use the command mv which is short for move.
+It operates in a similar way to cp.
+One slight advantage is that we can move directories without having to
+provide the -r option.
 
    $ ls
    file1 dir1 dir2
@@ -120,6 +122,3 @@ you may delete important directories (operating system) with no way back
 **warning** for a recursive deletion **always** check twice the path of the
 directory in the command. A "*" or a whitespace badly placed could lead to
 unwanted deletion....
-
-
-

@@ -12,21 +12,21 @@ Here is the basic set of wildcards:
 * ? - represents a single character
 * [] - represents a range of characters
 
-
     $ ls
     file1 file2 dir1
     ls f*
     file1 file2
 
 Wildcard is interpreted meaning that command is transformed
-before being passed to the program. This means that "ls f*" will make system look for "f*" matches and run "ls file1 file2". If command does not support multiple arguments this will fail.
+before being passed to the program. This means that "ls f*" will make system
+look for "f*" matches and run "ls file1 file2". If command does not support
+multiple arguments this will fail.
 
 Example:
 
     # I have a program named myprogram which expects a single argument
     $ myprogram f*
     # you will get an error because what is executed is myprogram file1 file2
-
 
 In this example we have used an absolute path.
 Wildcards work just the same if the path is absolute or
@@ -40,7 +40,6 @@ relative.
     $ ls /home/user1/*.txt
     /home/user1/file1.txt /home/user1/file2.txt  /home/user1/other1.txt
 
-
 Now let's introduce the ? operator.
 In this example we are looking for each file whose second letter is i
  As you can see, the pattern can be built up using several wildcards.
@@ -48,12 +47,10 @@ In this example we are looking for each file whose second letter is i
     $ ls ?i*
     file1.txt file2.txt
 
-
 Or how about every file with a three letter extension. Note that other.mpeg is not matched as the path name must match the given pattern exactly.
 
     $ ls *.???
     file1.txt file2.txt other1.txt
-
 
 And finally the range operator ( [ ] ).
 Unlike the previous 2 wildcards which specified any character, the range operator allows you to limit to a subset of characters.

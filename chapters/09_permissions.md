@@ -8,14 +8,15 @@ They are referred to in Linux by a single letter each.
 * w write - you may change the contents of the file.
 * x execute - you may execute or run the file if it is a program or script.
 
-For every file we define 3 sets of people for whom we may specify permissions.
+For every file we define 3 sets of people for whom we may specify
+permissions.
 
 * owner - a single person who owns the file. (typically the person who created the file but ownership may be granted to some one else by certain users)
 * group - every file belongs to a single group.
 * others - everyone else who is not in the group or the owner.
 
 Three persmissions and three groups of people.
-That's about all there is to permissions really. 
+That's about all there is to permissions really.
 Now let's see how we can view and change them.
 
 ## View permissions
@@ -31,7 +32,8 @@ If it is a dash ( - ) then it is a normal file.
 If it is a d then it is a directory.
 
 The following 3 characters represent the permissions for the owner.
-A letter represents the presence of a permission and a dash ( - ) represents the absence of a permission.
+A letter represents the presence of a permission and a dash ( - ) represents
+the absence of a permission.
 
 In this example the owner has all permissions (read, write and execute).
 
@@ -55,7 +57,8 @@ chmod has permission arguments that are made up of 3 components
 
 Who are we changing the permission for? [ugoa] - user (or owner), group, others, all
 
-Are we granting or revoking the permission - indicated with either a plus ( + ) or minus ( - )
+Are we granting or revoking the permission - indicated with either a plus
+( + ) or minus ( - )
 
 Which permission are we setting? - read ( r ), write ( w ) or execute ( x )
 

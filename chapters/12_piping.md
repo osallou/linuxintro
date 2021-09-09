@@ -12,18 +12,22 @@ connected to it.
 Piping and redirection is the means by which we may connect these streams between
 programs and files to direct data in interesting and useful ways.
 
-We'll demonstrate piping and redirection below with several examples but these
-mechanisms will work with every program on the command line,
+We'll demonstrate piping and redirection below with several examples
+but these mechanisms will work with every program on the command line,
 not just the ones we have used in the examples.
 
 # Redirecting to a File
 
-Normally, we will get our output on the screen, which is convenient most of the time,
+Normally, we will get our output on the screen, which is convenient
+most of the time,
 but sometimes we may wish to save it into a file to keep as a record,
 feed into another system, or send to someone else.
-The greater than operator ( > ) indicates to the command line that we wish the programs
-output (or whatever it sends to STDOUT) to be saved in a file instead of printed to the
-screen. Let's see an example.
+
+The greater than operator ( > ) indicates to the command line that
+we wish the programs output (or whatever it sends to STDOUT) to be saved
+in a file instead of printed to the screen.
+
+Let's see an example.
 
     $ ls
     file1 file2
@@ -35,18 +39,23 @@ Here we use the > to tell the terminal to save the output into the file myoutput
 You'll notice that we don't need to create the file before saving to it.
 The terminal will create it automatically if it does not exist.
 
-You'll notice that in the above example, the output saved in the file was one file per
-line instead of all across one line when printed to the screen.
-The reason for this is that the screen is a known width and the program can format its
-output to suit that. When we are redirecting, it may be to a file, or it could be
+You'll notice that in the above example, the output saved in the file
+was one file per line instead of all across one line when printed to
+the screen.
+
+The reason for this is that the screen is a known width and the program
+can format its output to suit that.
+
+When we are redirecting, it may be to a file, or it could be
 somewhere else, so the safest option is to format it as one entry per line.
-This also allows us to easier manipulate that data later on as we'll see further down
-the page.
+This also allows us to easier manipulate that data later on as we'll
+see further down.
 
 *warning*: If we redirect to a file which does not exist, it will be created
 automatically for us.
-If we save into a file which already exists, however, then it's contents will be
-cleared, then the new output saved to it.
+
+If we save into a file which already exists, however, then it's
+contents will be cleared, then the new output saved to it.
 
 ## redirecting from a file
 
@@ -57,7 +66,6 @@ It will forward content to the STDIN of the program
     8 myoutput
     $ wc -l < myoutput
     8
-
 
 We may easily combine the two forms of redirection we have seen so far into a single
 command as seen in the example below.
@@ -87,18 +95,21 @@ If we place a number before the > operator then it will redirect that stream
     $ cat errors.txt
     ls: cannot access blah.foo: No such file or directory
 
-
-Maybe we wish to save both normal output and error messages into a single file.
-This can be done by redirecting the STDERR stream to the STDOUT stream and redirecting
+Maybe we wish to save both normal output and error messages into
+a single file.
+This can be done by redirecting the STDERR stream to the STDOUT
+stream and redirecting
 STDOUT to a file. We redirect to a file first then redirect the error stream.
-We identify the redirection to a stream by placing an & in front of the stream number
-(otherwise it would redirect to a file called 1).
+We identify the redirection to a stream by placing an & in front of the
+stream number (otherwise it would redirect to a file called 1).
 
     $ ls -l file1 blah.foo > myoutput 2>&1
 
 ## Piping
+
 So far we've dealt with sending data to and from files.
-Now we'll take a look at a mechanism for sending data from one program to another.
+Now we'll take a look at a mechanism for sending data from one program
+to another.
 It's called piping and the operator we use is ( | )
 (found above the backslash ( \ ) key on most keyboards).
 
@@ -120,7 +131,8 @@ only the third file.
     $ ls | head -3 | tail -1
     file3
 
-Using *xargs* we can pipe the result of command to use them as arguments to the next command
+Using *xargs* we can pipe the result of command to use them as arguments
+to the next command
 
     # let's first add some content to files
     $ echo "aaaaa" > file1
