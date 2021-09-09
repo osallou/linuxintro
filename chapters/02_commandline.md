@@ -1,6 +1,6 @@
 # The command line
 
-## where it starts...
+## Before the prompt
 
 When starting a *terminal* (locally or via remote connection), several things
 happen behind the scenes.
@@ -21,11 +21,13 @@ Once the prompt appears, one can use the command line....
 It several shell windows/connections are opened, a new session starts (with preloads etc.),
 and each session is independant.
 
-## the terminal
+## The terminal
 
-Within a terminal you have what is known as a shell. This is a part of the operating system that defines how the terminal will behave and looks after running (or executing) commands for you. There are various shells available but the most common one is called bash which stands for Bourne again shell. This tutorial will assume you are using bash as your shell.
+Within a terminal you enter a shell.
+There are various shells available but the most common one is called bash which stands for Bourne again shell.
+This tutorial will assume you are using bash as your shell.
 
-As said above, some environment variables are set by the set, and can be updated later one.
+Some environment variables are set by the shell, and can be updated later one.
 To get the list of available variables:
 
     $ env
@@ -36,7 +38,10 @@ To get the list of available variables:
 
 Environment variables can be used with the "$" prefix
 
-If you would like to know which shell you are using you may use a command called echo to display a system variable stating your current shell. echo is a command which is used to display messages.
+If you would like to know which shell you are using you may use a command called **echo** to display a system variable
+stating your current shell.
+
+**echo** is a command which is used to display messages.
 
     $ echo $SHELL
     /bin/bash
@@ -52,4 +57,3 @@ In above example, the echo binary is in /usr/bin, so echo is automatically found
 If /usr/bin was not in the PATH, you should have called
 
      $ /usr/bin/echo $SHELL
-

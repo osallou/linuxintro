@@ -25,6 +25,8 @@ Backspace can also be used to escape whitespace
 
     $ ls myfile\ with\ spaces
 
+*remember*: try to avoid whitespaces and special characters in file/dir names.
+
 ## Hidden files/directories
 
 By default **ls** does not show hidden file.
@@ -42,11 +44,9 @@ You can list hidden files with a *ls -a*
     $ ls -la
     ...
 
-
 ## Find a file
 
-The **find** command search through a directory and its subdirectories for a file name and/or type
-
+The **find** command searches through a directory and its subdirectories for a file name and/or type
 
     $ ls
     file1 file2 subdir1

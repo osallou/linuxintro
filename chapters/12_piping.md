@@ -127,3 +127,14 @@ Using *xargs* we can pipe the result of command to use them as arguments to the 
     $ echo "bbbbb" > file2
     $ find . -type f | xargs grep aa  # find all files, and for each match, apply a filter on file content
     ./file1:aaa
+
+## AND/OR commands
+
+Though not really related to piping, it is nice to know that several commands can be executed on a single
+line, with conditional execution using "&&" (AND), "||" (OR) .
+
+    # use touch on file1 AND file2, touch file2 only if touch on file1 succeeds
+    $ touch file1 && touch file2
+
+    # use touch on file1, if failed echo an error
+    $ touch file4 || echo "Ooopsss!"

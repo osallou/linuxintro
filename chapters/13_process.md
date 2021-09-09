@@ -1,6 +1,5 @@
 # Processes
 
-
 ## What is Currently Running?
 
 Linux, like most modern OS's is a multitasking operating system.
@@ -27,7 +26,6 @@ use a program called **top**.
 You can leave with a Ctr+C
 
 It shows useful information of top processes running, with cpu and memory information.
-
 
 Top will give you a realtime view of the system and only show the number of processes
 which will fit on the screen.

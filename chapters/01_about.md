@@ -1,5 +1,16 @@
 # Linux
 
+## Good to know
+
+In following examples, the terminal prompt will be "$" (first character of the line).
+This means that you should not copy this "$" in your terminal to reproduce the examples.
+Lines not starting with $ represent the output of the commands
+
+For example:
+
+    $ echo "hello"     <= You should only write  *echo "hello"* in your terminal
+    hello              <= this is what appears in your terminal
+
 ## Kernel
 
 The Linux kernel is the main component of a Linux operating system (OS) and is the core interface between a computer’s hardware and its processes. It communicates between the 2, managing resources as efficiently as possible.
@@ -55,7 +66,7 @@ User a can for example have main group *users* be in other secondary groups *tea
 
 As user can switch between different user id/roles, might be interesting to know which user you are ;-)
 
-    # whoami
+    $ whoami
     userA
 
 Each user has a *home* directory, usually (but not necessarly) in /home. This *home* is owned
@@ -161,10 +172,3 @@ Signing stuff is also interesting (mandatory sometimes) and you may be intereste
 To install software, when you have no root priviledge, there are different tools that helps to
 install stuff in your home and update the known *PATH* to find it.
 [Conda](https://docs.conda.io/en/latest/) is a good example but not the only one.
-
-
-## Credits:
-
-[linuxtutorial](https://ryanstutorials.net/linuxtutorial/commandline.php): lots of stuff here are from this **nice** site but I needed to update some things, add extra commands/description, for this lesson. Thanks for those materials! Ryan Chadwick copyright 2021 
-
-[what-is-the-linux-kernel](https://www.redhat.com/en/topics/linux/what-is-the-linux-kernel)
