@@ -2,6 +2,8 @@
 
 We talk previously of systemd, which manage services startup and status (basically)
 
+To manage systemd, you need to be *root*.
+
 Services description are usually located in /lib/systemd/system and /etc/systemd/system.
 
 A service can be started or stopped manually via
