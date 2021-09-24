@@ -34,8 +34,8 @@ All paths use the "/" separator.
 First command to know is the *pwd* command which indicates where we are
 located in the file hierarchy.
 
-   $ pwd
-   /home/user1
+    $ pwd
+    /home/user1
 
 ## What's inside a directory
 

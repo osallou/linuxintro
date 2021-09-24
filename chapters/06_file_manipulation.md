@@ -72,21 +72,21 @@ It operates in a similar way to cp.
 One slight advantage is that we can move directories without having to
 provide the -r option.
 
-   $ ls
-   file1 dir1 dir2
-   $ mv dir1 dir3
-   $ ls
-   file1 dir2 dir3
+    $ ls
+    file1 dir1 dir2
+    $ mv dir1 dir3
+    $ ls
+    file1 dir2 dir3
 
 ## Rename
 
 Well... simply use **mv**!
 
-  $ ls
-  file1
-  $ mv file1 newfile1
-  $ ls
-  $ newfile1
+    $ ls
+    file1
+    $ mv file1 newfile1
+    $ ls
+    $ newfile1
 
 ## Delete a file and non empty directories
 

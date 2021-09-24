@@ -14,7 +14,7 @@ Usually variables are uppercased, but this is not mandatory.
 
 Then variable can be used later using its name, prefixed with a dollar sign "$"
 
-    $ echo "hello" $MYVARIABLE
+    $ echo "hello $MYVARIABLE"
 
 It is also possible to use ${MYVARIABLE}
 

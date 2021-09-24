@@ -11,10 +11,11 @@ Here is the basic set of wildcards:
 * \* - represents zero or more characters
 * ? - represents a single character
 * [] - represents a range of characters
+*
 
     $ ls
     file1 file2 dir1
-    ls f*
+    $ ls f*
     file1 file2
 
 Wildcard is interpreted meaning that command is transformed
