@@ -61,3 +61,11 @@ it needs to be reachable from your network.
 This means, usually, that you can use scp from your computer to an external server, but not the
 contrary because your computer IP address will not be reachable from the server as your IP address
 is not a public one (but depends...).
+
+## Testing
+
+Have no ssh server to connect to for testing?
+
+you create create a free account on github and follow instructions
+to test a connection with your ssh key
+[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)
