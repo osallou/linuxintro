@@ -134,6 +134,48 @@ The **cd** command moves to the specified directory location:  cd [location]
     $ pwd
     $ /home/user1
 
+## disk usage
+
+*df* command shows the different disks usage (physical or virtuals/remote)
+
+Option -h will show usage in human readable values (megabytes, giga, ..)
+instead of number of blocks
+
+    $ df -h
+    Filesystem                   Size  Used Avail Use% Mounted on
+    devtmpfs                      16G     0   16G   0% /dev
+    tmpfs                         16G  445M   16G   3% /dev/shm
+    tmpfs                        6.3G  2.4M  6.3G   1% /run
+    /dev/nvme0n1p2                96G   72G   20G  79% /
+    tmpfs                         16G   13M   16G   1% /tmp
+    /dev/nvme0n1p1               200M   36M  165M  18% /boot/efi
+    /dev/dm-0                    357G  213G  127G  63%
+    //some-remote/user1   12G  208M   12G   2% /mnt/user1   <== a remote volume
+
+*du* will calculate the disk usage in a directory and its subdirectories.
+This command will parse all dir/sub dirs so can be quite long to execute
+depending on number fo files/dirs.
+
+Example:
+
+    $ du -h .
+    104K    ./chapters <= size of sub directory chapters
+    64K	./.git/hooks
+    8.0K	./.git/info
+    8.0K	./.git/objects/b6
+    ...
+    648K	.  <= total of current and sub directories content
+
+It is possible to limit the display output to a number of directory depth with *--max-depth* option
+
+        # Show only total
+        $ du -h --max-depth 0 .
+        648K	.
+        # show only current dir and direct subdirs totals
+        104K	./chapters
+        528K	./.git
+        648K	.
+
 ## tips
 
 The *tab* key helps for autocompletion.
