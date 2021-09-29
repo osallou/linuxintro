@@ -82,6 +82,51 @@ Bash also manage loops using for, while, ...
 
 break can be used to exit the loop
 
+
+## Read from file or stdin
+
+Example script:
+
+    #!/bin/bash
+
+    # read line by line until end of file
+    while read line
+    do
+    echo "$line"
+    # ${1:-/dev/stdin} means redirect content of $1 (first argument), else if there is no argument, read from stdin
+    done < "${1:-/dev/stdin}"
+
+Execute with argument (read the script ifself for example, or an other one)
+
+    $ bash /tmp/test.sh /tmp/test.sh 
+    #!/bin/bash
+
+    while read line
+    do
+    echo "$line"
+    done < "${1:-/dev/stdin}"
+
+Execute, forwarding file content to script stdin
+
+    $ bash /tmp/test.sh < /tmp/test.sh 
+    #!/bin/bash
+
+    while read line
+    do
+    echo "$line"
+    done < "${1:-/dev/stdin}"
+
+Execute with no argument, instead use piping to forward
+the ouput of previous command to the script input
+
+    $ cat /tmp/test.sh | bash /tmp/test.sh
+    #!/bin/bash
+
+    while read line
+    do
+    echo "$line"
+    done < "${1:-/dev/stdin}"
+
 ## Exit
 
 To stop a program before it reaches the end, just call exit with an error code (0 for success)
