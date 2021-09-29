@@ -25,10 +25,10 @@ If a script is called, variable won't be visible inside the script.
 To make the variable available to a sub-process, it needs to be exported
 
     $ MYVARIABLE=123
-    $ ./test.sh  # MYVARIABLE **cannot** be used in test.sh
+    $ ./test.sh  # $MYVARIABLE **cannot** be used in test.sh
 
     $ export MYVARIABLE=123
-    $ ./test.sh  # MYVARIABLE can be used in test.sh
+    $ ./test.sh  # $MYVARIABLE can be used in test.sh
 
 To avoid export and use an environment variable in a subprocess on a per call basis,
 simply add its definition on the same command line
