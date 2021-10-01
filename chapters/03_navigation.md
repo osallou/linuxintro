@@ -2,7 +2,15 @@
 
 ## setup for exercices
 
-We suppose here you are user *user1*, simply replace user1 by your user id in the exercices/examples
+We suppose here you are user *user1* and your home directory is */home/user1*, so simply replace /home/user1 by your user home directory in the exercices/examples
+
+To know what is your home directory:
+
+    $ cd
+    $ pwd
+    /home/user1  <== this is your home directory
+
+And replace /home/user1 by your personal home directory
 
 Execute the following (don't worry you will understand after)
 
