@@ -58,7 +58,7 @@ thing and keep doing this.
     $ touch dir1/file2
     $ touch dir1/subdir1/subfile1
     $ mkdir dir2
-    # copy content of dir1 recursivly in dir1
+    # copy dir1 and content of dir1 recursivly in dir2
     $ cp -r dir1 dir2
     $ ls dir2
     file1 file2 subdir1

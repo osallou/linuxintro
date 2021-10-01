@@ -2,7 +2,7 @@
 
 ## setup for exercices
 
-We suppose here you are user *user1* and your home directory is */home/user1*, so simply replace /home/user1 by your user home directory in the exercices/examples
+We suppose here you are user *user1* and your home directory is */home/user1*, so simply replace */home/user1* by your user home directory in the following exercices/examples
 
 To know what is your home directory:
 
@@ -24,8 +24,10 @@ Execute the following (don't worry you will understand after)
 
 ## File hierarchy
 
-File system starts at "/", the *root* of the system.
+File system starts at directory "/", the *root* of the system.
 All paths use the "/" separator.
+
+This usually looks like:
 
 ```
 /
@@ -36,6 +38,14 @@ All paths use the "/" separator.
      | user
 ...
 ```
+
+The "/" directory will contain other directories and files, themselves,
+containing other directories and files.
+
+To access a resource (a file or a directory) you will to give its path to the command
+you execute. More information in **Path** chapter below.
+
+An invalid path will raise an exception (No such file or directory)
 
 ## Where are we?
 
@@ -91,7 +101,7 @@ Finally we have the actual name of the file or directory.
 ## Path
 
 A path defines where a file or directory is located on the system,
-it can be relativeor absolute
+it can be relative or absolute.
 
 Absolute paths specify a location (file or directory) in relation to the root directory. You can identify them easily as they always begin with a forward slash ( / )
 
@@ -101,7 +111,7 @@ Example:
 
     $ pwd
     /home/user1
-    # show relative path content
+    # show relative path content of subdir1
     $ ls subdir1
     file1.txt file2.txt file3.txt
 
@@ -109,13 +119,18 @@ Example:
     $ ls /home/user1/subdir1
     file1.txt file2.txt file3.txt
 
+Using absolute or relative path is "up to you"....
+Sometimes it is shorter to use relative path rather than writing the full path,
+but it can also be less readable or you may be unsure of final location.
+
 Extra ways exist to navigate in relative path:
 
-* ~ (tilde) - This is a shortcut for your home directory. eg, if your home directory is /home/user1 then you could refer to the directory Documents with the path /home/user1/Documents or ~/Documents
+* ~ (tilde) - This is a shortcut for your home directory. eg, if your home directory is /home/user1 then you could refer to the directory Documents with the path */home/user1/Documents* or *~/Documents*
 * . (dot) - This is a reference to your current directory. eg in the example above we referred to subdir1 with a relative path. It could also be written as ./subdir1 (Normally this extra bit is not required but in later sections we will see where it comes in handy).
 * .. (dotdot)- This is a reference to the parent directory. You can use this several times in a path to keep going up the hierarchy. eg if you were in the path /home/user1 you could run the command ls ../../ and this would do a listing of the root directory.
 
-    $ cd  (go to home directory, see after)
+    # go to home directory with *cd*, see following chapter
+    $ cd
     $ ls /home/user1/subdir1
     file1.txt file2.txt file3.txt
     $ ls ../../  (show 2 levels up in the directory hierarchy)
